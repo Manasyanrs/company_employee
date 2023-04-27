@@ -1,4 +1,4 @@
-package arnara.am.companyEmployee.employeeServlets;
+package arnara.am.companyEmployee.servlet.employeeServlets;
 
 import arnara.am.companyEmployee.manager.EmployeeManager;
 

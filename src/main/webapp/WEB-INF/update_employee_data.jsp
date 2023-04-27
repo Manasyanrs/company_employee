@@ -24,7 +24,10 @@
 </div>
 <br>
 <div>
-    <form method="post" action="/register_employee">
+    <form method="post" action="/update_employee">
+        <input type="hidden" name="address_id" value="<%=employee.getAddress().getId()%>"> <br>
+        <input type="hidden" name="id" value="<%=employee.getId()%>"> <br>
+
         <table>
             <tr>
                 <td>Employee name: </td>

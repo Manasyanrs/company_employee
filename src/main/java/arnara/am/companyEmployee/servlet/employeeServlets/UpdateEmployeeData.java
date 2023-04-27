@@ -1,4 +1,4 @@
-package arnara.am.companyEmployee.employeeServlets;
+package arnara.am.companyEmployee.servlet.employeeServlets;
 
 import arnara.am.companyEmployee.manager.AddressManager;
 import arnara.am.companyEmployee.manager.CompanyManager;
@@ -27,7 +27,6 @@ public class UpdateEmployeeData extends HttpServlet {
         int employeeId = Integer.parseInt(req.getParameter("id"));
         Employee employee = EMPLOYEE_MANAGER.getEmployeeById(employeeId);
         List<Company> companies = COMPANY_MANAGER.getCompanies();
-        System.out.println(companies);
 
         req.setAttribute("employee", employee);
         req.setAttribute("companies", companies);
@@ -57,6 +56,6 @@ public class UpdateEmployeeData extends HttpServlet {
         Employee employee = new Employee(id, name, surname, email, phone_number, address, company);
         EMPLOYEE_MANAGER.updateEmployeeData(employee);
 
-        resp.sendRedirect("/change_company_data");
+        resp.sendRedirect("/change_employee_data");
     }
 }

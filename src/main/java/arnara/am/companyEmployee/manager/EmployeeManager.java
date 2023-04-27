@@ -48,6 +48,7 @@ public class EmployeeManager {
             ps.setString(4, employee.getPhoneNumber());
             ps.setInt(5, employee.getAddress().getId());
             ps.setInt(6, employee.getCompany().getId());
+            ps.setInt(7, employee.getId());
             ps.executeUpdate();
 
         } catch (SQLException e) {
